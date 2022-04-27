@@ -1,0 +1,17 @@
+{
+  "name": "@loadingio/mini-fonts",
+  "version": "1.0.0",
+  "description": "minimized version of fonts used in loading.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "livescript": "^1.6.0",
+    "ttf2woff2": "^4.0.5",
+    "uglifycss": "^0.0.29"
+  }
+}

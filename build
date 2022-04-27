@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+rm -rf dist
+mkdir -p dist
+./node_modules/.bin/lsc src/index.ls
