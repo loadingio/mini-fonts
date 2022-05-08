@@ -1,5 +1,10 @@
 require! <[fs fs-extra path uglifycss ttf2woff2]>
-files = <[fonts/Oxygen-Bold-subset.ttf fonts/Roboto-Bold-subset.ttf fonts/Roboto-Light-subset.ttf]>
+files = <[
+  fonts/BenchNine-Regular-subset.ttf
+  fonts/Oxygen-Bold-subset.ttf
+  fonts/Roboto-Bold-subset.ttf
+  fonts/Roboto-Light-subset.ttf
+]>
 
 root = path.join(__dirname, '..')
 
@@ -9,19 +14,24 @@ du = files.map (f) ->
 
 css = """
 @font-face {
-  font-family: 'Oxygen';
-  font-style: normal; font-weight: 700; font-display: swap;
+  font-family: 'ldrs-default-font';
+  font-style: normal; font-weight: 300; font-display: swap;
   src: url('#{du.0}') format('woff2');
 }
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Oxygen';
   font-style: normal; font-weight: 700; font-display: swap;
   src: url('#{du.1}') format('woff2');
 }
 @font-face {
   font-family: 'Roboto';
-  font-style: normal; font-weight: 300; font-display: swap;
+  font-style: normal; font-weight: 700; font-display: swap;
   src: url('#{du.2}') format('woff2');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal; font-weight: 300; font-display: swap;
+  src: url('#{du.3}') format('woff2');
 }
 """
 css-min = uglifycss.process-string css
